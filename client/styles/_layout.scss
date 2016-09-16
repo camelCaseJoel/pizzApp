@@ -4,7 +4,7 @@ $verde: #19d219;
 *{
 	box-sizing: border-box;
 	font-family: monospace;
-	color: $verde;
+	color: white;
 	background-color: black;
 }
 body{
@@ -28,7 +28,7 @@ h1.title{
 input[type="text"]{
 	display: block;
 	margin-bottom: 10px;
-	border: 1px solid $verde;
+	border: 1px solid white;
 }
 label{
 	display: block;

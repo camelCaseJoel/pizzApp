@@ -1,5 +1,20 @@
 import { Meteor } from 'meteor/meteor';
+import { Productos, Ordenes, Mesas } from '../both/collections.js';
+
 
 Meteor.startup(() => {
-  // code to run on server at startup
+	if( Mesas.find().count() === 0 ){
+		Mesas.insert({
+			numero: 1,
+			capacidad: 5
+		});
+		Mesas.insert({
+			numero: 2,
+			capacidad: 10
+		});
+		Mesas.insert({
+			numero: 3,
+			capacidad: 15
+		});
+	}	
 });
