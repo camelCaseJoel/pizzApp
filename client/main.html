@@ -3,23 +3,20 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1 class="title"><img class="logo" src="pizza.png" > PizzApp</h1>
+  <section>
+	  {{> hacerPedido}}
+  </section>
+  <section>
 
-  {{> hello}}
-  {{> info}}
+  </section>
+  
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="hacerPedido">
+	<label for="mesa">Mesa: </label>
+	<input id="mesa" type="text">
+	<label for="item">Pedido: </label>
+	<input id ="item_1" type="text">
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>
