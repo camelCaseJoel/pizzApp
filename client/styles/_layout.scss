@@ -1,7 +1,9 @@
 // Variables
 $verde: #19d219;
+$verde-linea: #158815;
 $gris-oscuro: #141414;
 $gris-borde-input: #626262;
+
 
 *{
 	box-sizing: border-box;
@@ -14,12 +16,17 @@ body{
 	padding: 20px 50px;
 }
 h1.title{
-	color: $verde;
-	font-weight: normal;
-    font-size: 20px;
+	// color: $verde;
+	// font-weight: normal;
+    // font-size: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid $verde;
+	border-bottom: 1px solid $verde-linea;
 	margin-bottom: 30px;
+	margin-top: 0;
+	span{
+		color: white;
+		font-size: 25px;
+	}
 	img.logo{
 		width: 36px;
 		position: relative;
@@ -30,6 +37,7 @@ h1.title{
 
 section.uno{
 	padding: 0 20px;
+	padding-left: 0;
 	width: 250px;
 	border-right: 1px solid $gris-borde-input;
 }
@@ -50,6 +58,7 @@ button{
 	border: 1px solid $verde;
 	width: 100%;
 	padding: 15px 0;
+	margin-top: 10px;
 }
 label{
 	display: block;
