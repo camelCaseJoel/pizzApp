@@ -4,10 +4,11 @@ $verde-linea: #158815;
 $gris-oscuro: #141414;
 $gris-borde-input: #626262;
 
-
+//===================================== General stuff
 *{
 	box-sizing: border-box;
 	font-family: monospace;
+	font-size: 13px;
 	color: white;
 	background-color: $gris-oscuro;
 }
@@ -15,10 +16,13 @@ body{
 	// background-color: black;
 	padding: 20px 50px;
 }
+
+//===================================== Header
 h1.title{
 	// color: $verde;
 	// font-weight: normal;
     // font-size: 20px;
+	position: relative;
 	padding-bottom: 20px;
 	border-bottom: 1px solid $verde-linea;
 	margin-bottom: 30px;
@@ -30,11 +34,38 @@ h1.title{
 	img.logo{
 		width: 36px;
 		position: relative;
-		top: 3px;
-		left: 12px;
+		top: -6px;
+		left: 16px;
+		background-color: transparent;
 	}
 }
 
+//===================================== LogIn
+div#login-buttons{
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+div.accounts-dialog{
+	background-color: $gris-oscuro;
+	padding: 20px;
+	border: 1px solid $verde-linea;
+	
+	input[type="email"],input[type="password"]{
+		@extend input[type="text"];
+	}
+	a, .login-button, .additional-link-container{
+		cursor: pointer;
+		margin: 5px 0;
+	}
+	a.login-close-text{
+		color: $verde;
+		float: right;
+	}
+}
+.login-link-text{ cursor:pointer; }
+//===================================== Section uno
 section.uno{
 	padding: 0 20px;
 	padding-left: 0;
