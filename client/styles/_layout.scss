@@ -16,6 +16,11 @@ body{
 	// background-color: black;
 	padding: 20px 50px;
 }
+h3{
+	font-size: 16px;
+	font-weight: normal;
+	color: $verde;
+}
 
 //===================================== Header
 h1.title{
@@ -62,6 +67,13 @@ div.accounts-dialog{
 	a.login-close-text{
 		color: $verde;
 		float: right;
+	}
+	// this is the one!
+	.login-button{
+		text-align: center;
+		padding: 20px;
+		background-color: $verde-linea;
+		border: 1px solid $verde-linea;
 	}
 }
 .login-link-text{ cursor:pointer; }
