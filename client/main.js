@@ -15,8 +15,8 @@ Template.hacerPedido.events({
  
 		//Validación
 		let numeroMesa = Number( $('#mesa').val() );
-		validaExistenciaMesa( numeroMesa );
-		
+		let passedTest = validaExistenciaMesa( numeroMesa );
+		console.log( passedTest );
 		
 	}
 });
