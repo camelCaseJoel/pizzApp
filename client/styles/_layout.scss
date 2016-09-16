@@ -1,14 +1,16 @@
 // Variables
 $verde: #19d219;
+$gris-oscuro: #141414;
+$gris-borde-input: #626262;
 
 *{
 	box-sizing: border-box;
 	font-family: monospace;
 	color: white;
-	background-color: black;
+	background-color: $gris-oscuro;
 }
 body{
-	background-color: black;
+	// background-color: black;
 	padding: 20px 50px;
 }
 h1.title{
@@ -28,7 +30,7 @@ h1.title{
 input[type="text"]{
 	display: block;
 	margin-bottom: 10px;
-	border: 1px solid white;
+	border: 1px solid $gris-borde-input;
 }
 label{
 	display: block;
