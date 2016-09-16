@@ -21,22 +21,36 @@ h1.title{
 	border-bottom: 1px solid $verde;
 	margin-bottom: 30px;
 	img.logo{
-		width: 45px;
+		width: 36px;
 		position: relative;
 		top: 3px;
 		left: 12px;
 	}
 }
+
+section.uno{
+	padding: 0 20px;
+	width: 250px;
+	border-right: 1px solid $gris-borde-input;
+}
+
+#mensaje_error{
+	color: red;
+}
 input[type="text"]{
 	display: block;
+	width: 100%;
 	margin-bottom: 10px;
 	border: 1px solid $gris-borde-input;
+}
+button{
+	//color: $verde;
+	border: 1px solid $verde;
+	width: 100%;
+	padding: 15px 0;
 }
 label{
 	display: block;
 	margin-bottom: 5px;
 }
 
-#mensaje_error{
-	color: red;
-}
