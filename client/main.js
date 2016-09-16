@@ -1,3 +1,5 @@
+import{ validaExistenciaMesa } from '../both/validationUtility.js'
+
 
 Template.hacerPedido.helpers({
   nothing() {
@@ -7,18 +9,14 @@ Template.hacerPedido.helpers({
 
 Template.hacerPedido.events({
 	'click button#nuevo_pedido'(event) {
-
+		
 		//limpiar mensajes de error
 		$('#mensaje_error').html('');
-
-		const mesasExistentes = [1,2,3]; 
+ 
+		//Validación
 		let numeroMesa = Number( $('#mesa').val() );
+		validaExistenciaMesa( numeroMesa );
 		
-		//debugging:
-		//console.log( _.contains(mesasExistentes, numeroMesa) );
-
-		if( !(_.contains(mesasExistentes, numeroMesa)) ){
-			$('#mensaje_error').html('Esta mesa no existe');
-		}
+		
 	}
 });
