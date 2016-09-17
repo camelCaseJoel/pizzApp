@@ -1,6 +1,8 @@
 import{ validaExistenciaMesa } from '../both/validationUtility.js'
 
-
+//==================================================
+//             HACER-PEDIDO TEMPLATE 
+//==================================================
 Template.hacerPedido.helpers({
   nothing() {
     return {};
@@ -20,3 +22,7 @@ Template.hacerPedido.events({
 		
 	}
 });
+
+//==================================================
+//             LISTA DE PEDIDOS TEMPLATE 
+//==================================================

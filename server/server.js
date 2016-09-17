@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Productos, Ordenes, Mesas } from '../both/collections.js';
 
 
+
 Meteor.startup(() => {
 	if( Mesas.find().count() === 0 ){
 		Mesas.insert({
