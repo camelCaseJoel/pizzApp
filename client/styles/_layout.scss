@@ -67,7 +67,8 @@ div.accounts-dialog{
 	}
 	a.login-close-text{
 		color: $verde;
-		float: right;
+		display: block;
+		margin-bottom: 20px;
 	}
 	// this is the one!
 	.login-button{
