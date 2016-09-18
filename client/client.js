@@ -69,6 +69,7 @@ Template.createUser.events({
 		Accounts.createUser( options, (error)=>{
 			if(error){
 				console.log( error.reason );
+				$('#mensaje_error_create_user').append('<li>' + error.reason + '</li>');
 			}
 			
 		} );
