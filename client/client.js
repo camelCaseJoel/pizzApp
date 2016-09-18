@@ -33,6 +33,7 @@ Template.login_box.events({
 		Meteor.loginWithPassword( user, pass , (error)=>{
 			if(error){
 				console.log( error.reason );
+				$('#mensaje_error_login').append('<li>' + error.reason + '</li>');
 			}
 		});
 	}

@@ -90,7 +90,7 @@ section.uno{
 	border-right: 1px solid $gris-borde-input;
 }
 
-#mensaje_error li{
+#mensaje_error li, #mensaje_error_login li{
 	color: red;
 }
 input[type="text"]{

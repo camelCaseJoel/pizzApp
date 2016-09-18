@@ -23,6 +23,7 @@
 <template name="login_box">
 	{{#unless currentUser}}
 	<div id="login_box">
+		<ul id="mensaje_error_login"></ul>
 		<label for="name">Nombre:</label>
 		<input id="name" type="text">
 		<label for="password">Clave</label>
@@ -31,6 +32,10 @@
 	</div>
 	{{/unless}}
 	
+</template>
+
+<template name="create_product">
+
 </template>
 
 <!-- ================================================== -->
