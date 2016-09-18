@@ -24,5 +24,17 @@ Template.hacerPedido.events({
 });
 
 //==================================================
-//             LISTA DE PEDIDOS TEMPLATE 
+//                CREATE-USER TEMPLATE 
 //==================================================
+Template.createUser.events({
+	'click button#create_user'(event){
+		let options = {
+			username: $('#name').val(),
+			password: $('#name').val(),
+			role: $('#role').val()
+
+		}
+		console.log( options )
+		//Accounts.createUser( options );
+	}
+});
