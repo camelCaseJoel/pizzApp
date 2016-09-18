@@ -46,7 +46,13 @@ h1.title{
 	}
 }
 
-//==================================== Login CUSTOM [mío]
+//=================================== login-box
+div#login_box{
+	@extend div#user_box;
+	right: 200px;
+}
+
+//==================================== create-user CUSTOM [mío]
 div.create_user_box{
 	width: 100%;
 	padding: 20px;
@@ -61,6 +67,20 @@ div.create_user_box{
 	// top: 0;
 }
 
+//==================================== User-box
+div#user_box{
+	width: 200px;
+	padding: 20px;
+	border: 1px solid $gris-borde-input;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	span{
+		font-size: 12px;
+		color: yellow;
+	}
+}
 
 //===================================== Section uno
 section.uno{

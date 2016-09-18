@@ -6,9 +6,8 @@
 <h1 class="title">
 	<img class="logo" src="pizza.png" >
 	<span>PizzApp</span>
-	{{#if currentUser}}
-	<span id="isLoggedIn">You are logged in :D</span>
-	{{/if}}
+	{{> login_box}}
+	{{> user_box}}
 </h1>
 <section class="uno">
 	{{> hacerPedido}}
@@ -20,6 +19,21 @@
 </section>
 </body>
 
+<!-- ================================================== -->
+<template name="login_box">
+	{{#unless currentUser}}
+	<div id="login_box">
+		<label for="name">Nombre:</label>
+		<input id="name" type="text">
+		<label for="password">Clave</label>
+		<input id="password" type="text">
+		<button id="login">Login</button>
+	</div>
+	{{/unless}}
+	
+</template>
+
+<!-- ================================================== -->
 <template name="hacerPedido">
 	<h3>Crear Pedidos</h3>
 	<ul id="mensaje_error"></ul>
@@ -29,7 +43,17 @@
 	<input id ="item_1" type="text">
 	<button id="nuevo_pedido">Crear Pedido</button>
 </template>
-
+<!-- ================================================== -->
+<template name="user_box">
+	{{#if currentUser}}
+	<div id="user_box">
+		<span id="is_logged_in">Hola!  :D</span>
+		<span></span>
+		<button id="logout">Logout</button>
+	</div>
+	{{/if}}
+</template>
+<!-- ================================================== -->
 <template name="createUser">
 	<div class="create_user_box">
 		<h3>Crear Usuarios</h3>
@@ -47,3 +71,4 @@
 	</div>
 </template>
 
+ 
