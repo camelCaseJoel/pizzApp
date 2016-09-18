@@ -24,6 +24,46 @@ Template.hacerPedido.events({
 });
 
 //==================================================
+//             CREAR-PRODUCTO TEMPLATE 
+//==================================================
+Template.create_product.events({
+	'click button#create_product'(){
+		//clear printed errors
+		$('#error_message_create_product').html('');
+
+		let productName = $('#product_name').val();
+		let price = $('#price').val();
+		
+		//some validations( I need to refactor this later )
+		if(productName.length === 0 || price.length === 0){
+			$('#error_message_create_product').append('<li>' + "Los campos están vacíos" + '</li>');
+
+			//this will cancel the rest of the function
+			return;
+		}
+
+		//from a string to a Number.
+		price = Number( price );
+
+		let product = {
+			productName,
+			price
+		}
+
+		Meteor.call( 'addProduct', product, (error)=>{
+			if(error){
+				console.log(error);
+				$('#error_message_create_product').append('<li>' + error.reason + '</li>');
+			}
+			
+		});
+
+		$('input').val('');
+	}
+});
+
+
+//==================================================
 //                LOGIN-BOX TEMPLATE 
 //==================================================
 Template.login_box.events({
