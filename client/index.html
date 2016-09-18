@@ -11,6 +11,7 @@
 </h1>
 <section class="uno">
 	{{> hacerPedido}}
+	{{> create_product}}
 	{{> createUser}}
 </section>
 
@@ -35,12 +36,21 @@
 </template>
 
 <template name="create_product">
-
+	<div id="create_product_box">
+		<h3>Crear Producto:</h3>
+		<ul id="error_message_create_product"></ul>
+		<label for="product_name">Nombre: </label>
+		<input id="product_name" type="text">
+		<label for="price">Price</label>
+		<input id="price" type="text">
+		<button id="create_product">Crear Producto</button>
+	</div>
+	
 </template>
 
 <!-- ================================================== -->
 <template name="hacerPedido">
-	<h3>Crear Pedidos</h3>
+	<h3>Crear Pedidos:</h3>
 	<ul id="mensaje_error"></ul>
 	<label for="mesa">Mesa: </label>
 	<input id="mesa" type="text">
@@ -48,7 +58,7 @@
 	<input id ="item_1" type="text">
 	<button id="nuevo_pedido">Crear Pedido</button>
 </template>
-<!-- ================================================== -->
+<!-- ============================================user box====== -->
 <template name="user_box">
 	{{#if currentUser}}
 	{{#with currentUser}}
@@ -60,11 +70,11 @@
 	{{/with}}
 	{{/if}}
 </template>
-<!-- ================================================== -->
+<!-- ==========================================CREATE USERS======== -->
 <template name="createUser">
 	<div class="create_user_box">
 		<ul id="mensaje_error_create_users"></ul>
-		<h3>Crear Usuarios</h3>
+		<h3>Crear Usuarios:</h3>
 		<label for="name">Nombre:</label>
 		<input id="name" type="text">
 		<label for="password">Clave:</label>

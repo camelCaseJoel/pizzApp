@@ -52,12 +52,21 @@ div#login_box{
 	right: 200px;
 }
 
+//==================================== create PRODUCT
+div#create_product_box{
+	@extend .create_user_box;
+}
+
 //==================================== create-user CUSTOM [mío]
 div.create_user_box{
 	width: 100%;
 	padding: 20px;
 	margin-top: 20px;
 	border: 1px solid $gris-borde-input;
+	background-color: #1a1a1a;
+	*{
+		background-color: #1a1a1a;
+	}
 	select{
 		width: 100%;
 		@extend input[type="text"];
