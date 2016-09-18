@@ -46,39 +46,22 @@ h1.title{
 	}
 }
 
-//===================================== LogIn
-div#login-buttons{
-	font-size: 12px;
-	position: absolute;
-	right: 0;
-	top:0;
-}
-div.accounts-dialog{
-	background-color: $gris-oscuro;
+//==================================== Login CUSTOM [mío]
+div.create_user_box{
+	width: 100%;
 	padding: 20px;
-	border: 1px solid $verde-linea;
-	
-	input[type="email"],input[type="password"]{
+	margin-top: 20px;
+	border: 1px solid $gris-borde-input;
+	select{
+		width: 100%;
 		@extend input[type="text"];
 	}
-	a, .login-button, .additional-link-container{
-		cursor: pointer;
-		margin: 5px 0;
-	}
-	a.login-close-text{
-		color: $verde;
-		display: block;
-		margin-bottom: 20px;
-	}
-	// this is the one!
-	.login-button{
-		text-align: center;
-		padding: 20px;
-		background-color: $verde-linea;
-		border: 1px solid $verde-linea;
-	}
+	// position: absolute;
+	// right: 0;
+	// top: 0;
 }
-.login-link-text{ cursor:pointer; }
+
+
 //===================================== Section uno
 section.uno{
 	padding: 0 20px;
@@ -110,3 +93,39 @@ label{
 	margin-bottom: 5px;
 }
 
+
+
+//===================================== LogIn [ACCOUNTS-PASSWORD]
+//-------------------------- Lo quité
+// div#login-buttons{
+// 	font-size: 12px;
+// 	position: absolute;
+// 	right: 0;
+// 	top:0;
+// }
+// div.accounts-dialog{
+// 	background-color: $gris-oscuro;
+// 	padding: 20px;
+// 	border: 1px solid $verde-linea;
+	
+// 	input[type="email"],input[type="password"]{
+// 		@extend input[type="text"];
+// 	}
+// 	a, .login-button, .additional-link-container{
+// 		cursor: pointer;
+// 		margin: 5px 0;
+// 	}
+// 	a.login-close-text{
+// 		color: $verde;
+// 		display: block;
+// 		margin-bottom: 20px;
+// 	}
+// 	// this is the one!
+// 	.login-button{
+// 		text-align: center;
+// 		padding: 20px;
+// 		background-color: $verde-linea;
+// 		border: 1px solid $verde-linea;
+// 	}
+// }
+// .login-link-text{ cursor:pointer; }

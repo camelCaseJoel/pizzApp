@@ -7,8 +7,7 @@ if(Meteor.isClient){
 if(Meteor.isServer){
 	Accounts.onCreateUser(function (options, user) {
 		user.profile = options.profile;
-		console.log(options)
 		return user;
-
 	});
 }
+
