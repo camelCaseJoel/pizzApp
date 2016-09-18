@@ -55,6 +55,9 @@ Template.user_box.events({
 //==================================================
 Template.createUser.events({
 	'click button#create_user'( event ){
+		//limpiar mensajes de error
+		$('#mensaje_error_create_users').html('');
+
 		let userName = $('div.create_user_box #name').val();
 		let password = $('div.create_user_box #password').val();
 
@@ -64,15 +67,17 @@ Template.createUser.events({
 			role: $('#role').val()
 
 		}
-		console.log( options )
+		console.log( options );
 
 		Accounts.createUser( options, (error)=>{
 			if(error){
 				console.log( error.reason );
-				$('#mensaje_error_create_user').append('<li>' + error.reason + '</li>');
+				$('#mensaje_error_create_users').append('<li>' + error.reason + '</li>');
 			}
 			
-		} );
+		});
+
+		$('input').val('');
 	}
 });
 
