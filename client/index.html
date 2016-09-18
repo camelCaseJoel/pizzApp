@@ -46,11 +46,13 @@
 <!-- ================================================== -->
 <template name="user_box">
 	{{#if currentUser}}
+	{{#with currentUser}}
 	<div id="user_box">
-		<span id="is_logged_in">Hola!  :D</span>
+		<span id="is_logged_in">Hola! {{username}} :D</span>
 		<span></span>
 		<button id="logout">Logout</button>
 	</div>
+	{{/with}}
 	{{/if}}
 </template>
 <!-- ================================================== -->
