@@ -6,6 +6,9 @@
 <h1 class="title">
 	<img class="logo" src="pizza.png" >
 	<span>PizzApp</span>
+	{{#if currentUser}}
+	<span id="isLoggedIn">You are logged in :D</span>
+	{{/if}}
 </h1>
 <section class="uno">
 	{{> hacerPedido}}

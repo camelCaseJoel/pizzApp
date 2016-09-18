@@ -2,7 +2,22 @@ import { Meteor } from 'meteor/meteor';
 import { Productos, Ordenes, Mesas } from '../both/collections.js';
 
 
+// =================== USER CREATION ===================
+//------------------------------------------------------
+Accounts.onCreateUser(function (options, user) {
+	//my custom user fields :D
+	user.role = options.role;
 
+	if(options.profile){
+		user.profile = options.profile;
+	}
+	
+	return user;
+});
+
+
+//====================== STARTUP =======================
+//------------------------------------------------------
 Meteor.startup(() => {
 	if( Mesas.find().count() === 0 ){
 		Mesas.insert({

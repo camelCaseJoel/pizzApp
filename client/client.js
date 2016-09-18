@@ -35,6 +35,6 @@ Template.createUser.events({
 
 		}
 		console.log( options )
-		//Accounts.createUser( options );
+		Accounts.createUser( options );
 	}
 });
