@@ -56,10 +56,9 @@
 	<label for="mesa">Mesa: </label>
 	<input id="mesa" type="text">
 	<label for="item">Pedido: </label>
-	
 	<select id="pedido">
 	{{#each products}}
-	<p>{{name}} : {{price}}</p>
+		<option value="{{_id}}">{{name}}</option>
 	{{/each}}
 	</select>
 

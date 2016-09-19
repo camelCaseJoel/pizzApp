@@ -2,12 +2,12 @@ import{ validaExistenciaMesa } from '../both/validationUtility.js'
 import{ Productos, Mesas } from '../both/collections.js';
 
 
-//================== SUBSCRIPTIONS==================
-Meteor.subscribe('todasMesas');
-Meteor.subscribe('products');
 
-console.log( Productos.find().fetch() );
-console.log( Mesas.find().fetch() );
+// checking data -- DEBUG
+// Deps.autorun(function() {
+// 	console.log( Productos.find().fetch() );
+// 	console.log( Mesas.find().fetch() );
+// });
 
 //==================================================
 //             HACER-PEDIDO TEMPLATE 
