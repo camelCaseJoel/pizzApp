@@ -9,4 +9,4 @@ Meteor.publish('products',()=>{
 });
  
 console.log( Productos.find().fetch() );
-console.log( Mesas.find().fetch() );
+console.log( Mesas.find().fetch() ); 
