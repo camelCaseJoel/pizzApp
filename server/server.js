@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Productos, Ordenes, Mesas } from '../both/collections.js';
 
 
+ 
 // =================== USER CREATION ===================
 //------------------------------------------------------
 Accounts.onCreateUser(function (options, user) {
@@ -15,7 +16,7 @@ Accounts.onCreateUser(function (options, user) {
 	return user;
 });
 
-
+ 
 //====================== STARTUP =======================
 //------------------------------------------------------
 Meteor.startup(() => {
