@@ -21,6 +21,10 @@ h3{
 	font-weight: normal;
 	color: $verde;
 }
+select{
+	width: 100%;
+	@extend input[type="text"];
+}
 
 //===================================== Header
 h1.title{
