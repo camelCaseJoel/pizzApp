@@ -56,12 +56,13 @@
 	<label for="mesa">Mesa: </label>
 	<input id="mesa" type="text">
 	<label for="item">Pedido: </label>
+	<button id="add_product">Agregar producto</button>
 	<select class="pedido" id="pedido">
 	{{#each products}}
 		<option value="{{_id}}">{{name}}</option>
 	{{/each}}
 	</select>
-
+	<ul id="product_list"></ul>
 	<button id="nuevo_pedido">Crear Pedido</button>
 </template>
 <!-- ============================================user box====== -->

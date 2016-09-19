@@ -50,6 +50,23 @@ h1.title{
 	}
 }
 
+// ================================== HACER PEDIDIOS
+button#nuevo_pedido{
+	background-color: $verde-linea;
+	border: 1px solid $verde-linea;
+	
+}
+button#add_product{
+	margin-bottom: 5px;
+}
+ul#product_list{
+	
+	li{
+		color: $verde;
+	}
+}
+
+
 //=================================== login-box
 div#login_box{
 	@extend div#user_box;
