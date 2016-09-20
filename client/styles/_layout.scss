@@ -28,9 +28,11 @@ select{
 }
 section{
 	float: left;
+	position: relative;
 }
 //===================================== Header
 h1.title{
+	z-index: 100;
 	// color: $verde;
 	// font-weight: normal;
     // font-size: 20px;
@@ -155,9 +157,15 @@ section.dos{
 	border-right: 1px solid $gris-borde-input;
 }
 div.order_box{
+	& *{
+		background-color: #2b2b2b;
+	}
 	width: 200px;
 	float: left;
-	border: 1px solid $gris-borde-input;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	//border: 1px solid $verde-linea;
+	background-color: #2b2b2b;
 	padding: 15px;
 	img{
 		display: block;
@@ -177,7 +185,7 @@ div.order_box{
 	}
 }
 ul.order_list{
-	padding-left: 15;
+	padding-left: 15px;
 	//list-style: none;
 	li{
 		font-size: 12px;

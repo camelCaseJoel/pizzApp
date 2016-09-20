@@ -1,5 +1,5 @@
 import{ validaExistenciaMesa } from '../both/validationUtility.js'
-import{ Productos, Mesas } from '../both/collections.js';
+import{ Productos, Mesas, Ordenes } from '../both/collections.js';
 
 
 
@@ -8,6 +8,15 @@ import{ Productos, Mesas } from '../both/collections.js';
 // 	console.log( Productos.find().fetch() );
 // 	console.log( Mesas.find().fetch() );
 // });
+
+//==================================================
+//             ORDERS TEMPLATE 
+//==================================================
+Template.orders.helpers({
+	orders(){
+		return Ordenes.find();
+	}
+});
 
 //==================================================
 //             HACER-PEDIDO TEMPLATE 

@@ -26,9 +26,10 @@
 
 <!-- =========================================ORDERS========= -->
 <template name="orders">
+		{{#each orders}}
 		<div class="order_box">
 			<img src="supper.png" >
-			<h2 class="mesa">Mesa: 2</h2>
+			<h2 class="mesa">Mesa# {{numeroMesa}}</h2>
 			<ul class="order_list">
 				<li>Cocacola: $40</li>
 				<li>Pizza: $340</li>
@@ -39,6 +40,7 @@
 			</ul>
 			<button class="order_is_ready">Orden está Lista</button>
 		</div>
+		{{/each}}
 	</template>
 <!-- ================================================== -->
 <template name="login_box">
