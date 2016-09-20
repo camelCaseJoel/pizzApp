@@ -12,23 +12,62 @@ import{ Productos, Mesas } from '../both/collections.js';
 //==================================================
 //             HACER-PEDIDO TEMPLATE 
 //==================================================
+//-------------------
+//      helpers
+//-------------------
 Template.hacerPedido.helpers({
   products() {
     return Productos.find();
   }
 });
-
+//-------------------
+//      events
+//-------------------
 Template.hacerPedido.events({
 	'click button#nuevo_pedido'( event ) {
-		
 		//limpiar mensajes de error
 		$('#mensaje_error').html('');
- 
-		//Validación
+
+		//Validación de 'mesa'
 		let numeroMesa = Number( $('#mesa').val() );
 		let passedTest = validaExistenciaMesa( numeroMesa );
 		console.log( passedTest );
+
+		//getting data from UI (products)
+		let products_list = $('ul#product_list').children( 'li' );
 		
+		//loop 'em
+		let product_data = [];
+		products_list.each((i, e)=>{
+			let item = {};
+			item.id = $(e).attr('data-id');
+			item.name = $(e).text();
+			product_data.push( item );
+		});
+
+		let finalObjectToSave = {
+			dataArray: product_data,
+			numeroMesa: numeroMesa
+		}
+
+		if(passedTest){
+			Meteor.call('createOrder', finalObjectToSave,(error)=>{
+				if(error){
+					console.log( 'some shit happend: '+ error.reason )
+				}
+			})
+		}
+
+		//Limpiar lista de PRODUCTOS +++++
+		$('ul#product_list').html('');
+	},
+
+	'click button#add_product'(event){
+		let id = $('select#pedido').val();
+		let productName = Productos.find( {_id: id} ).fetch()[0].name;
+
+		$('ul#product_list').append('<li data-id="' + id + '">'+ productName +'</li>');
+		//console.log( id, productName );
 	}
 });
 
