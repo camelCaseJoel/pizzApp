@@ -161,6 +161,7 @@ div.order_box{
 		background-color: #2b2b2b;
 	}
 	width: 200px;
+	height: 350px;
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -185,11 +186,14 @@ div.order_box{
 	}
 }
 ul.order_list{
-	padding-left: 15px;
+	height: 150px;
+	padding-left: 25px;
+	overflow-y: auto;
+	border: 1px solid $gris-borde-input;
 	//list-style: none;
 	li{
 		font-size: 12px;
-		padding: 5px 0;
+		padding: 5px 0px;
 	}
 }
 
