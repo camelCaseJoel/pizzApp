@@ -58,8 +58,9 @@ Template.hacerPedido.events({
 			})
 		}
 
-		//Limpiar lista de PRODUCTOS +++++
+		//Limpiar  +++++
 		$('ul#product_list').html('');
+		$('input').val('');
 	},
 
 	'click button#add_product'(event){
