@@ -31,12 +31,9 @@
 			<img src="supper.png" >
 			<h2 class="mesa">Mesa# {{numeroMesa}}</h2>
 			<ul class="order_list">
-				<li>Cocacola: $40</li>
-				<li>Pizza: $340</li>
-				<li>Jugo Naranja: $20</li>
-				<li>Cocacola: $40</li>
-				<li>Pizza: $340</li>
-				<li>Jugo Naranja: $20</li>
+				{{#each orderItems}}
+				<li>{{name}}</li>
+				{{/each}}
 			</ul>
 			<button class="order_is_ready">Orden está Lista</button>
 		</div>
