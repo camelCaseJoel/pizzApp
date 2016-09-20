@@ -15,11 +15,31 @@
 	{{> createUser}}
 </section>
 
-<section>
-
+<section class="dos">
+	{{> orders}}
 </section>
 </body>
 
+
+
+
+
+<!-- =========================================ORDERS========= -->
+<template name="orders">
+		<div class="order_box">
+			<img src="waiter.png" >
+			<h2 class="mesa">Mesa: 2</h2>
+			<ul class="order_list">
+				<li>Cocacola: $40</li>
+				<li>Pizza: $340</li>
+				<li>Jugo Naranja: $20</li>
+				<li>Cocacola: $40</li>
+				<li>Pizza: $340</li>
+				<li>Jugo Naranja: $20</li>
+			</ul>
+			<button class="order_is_ready">Orden está Lista</button>
+		</div>
+	</template>
 <!-- ================================================== -->
 <template name="login_box">
 	{{#unless currentUser}}

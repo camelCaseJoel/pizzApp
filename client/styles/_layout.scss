@@ -15,6 +15,7 @@ $gris-borde-input: #626262;
 body{
 	// background-color: black;
 	padding: 20px 50px;
+	//overflow: hidden;
 }
 h3{
 	font-size: 16px;
@@ -25,7 +26,9 @@ select{
 	width: 100%;
 	@extend input[type="text"];
 }
-
+section{
+	float: left;
+}
 //===================================== Header
 h1.title{
 	// color: $verde;
@@ -141,6 +144,43 @@ button{
 label{
 	display: block;
 	margin-bottom: 5px;
+}
+
+
+//===================================== Section dos
+section.dos{
+	width: 750px;
+	padding: 20px;
+	min-height: 600px;
+	border-right: 1px solid $gris-borde-input;
+}
+div.order_box{
+	width: 200px;
+	float: left;
+	border: 1px solid $gris-borde-input;
+	padding: 15px;
+	img{
+		display: block;
+		margin: 0 auto;
+		width: 50px;
+		opacity: 1;
+	}
+	h2.mesa{
+		color: white;
+		font-size: 16px;
+		
+	}
+	button{
+		color: $verde;
+	}
+}
+ul.order_list{
+	padding: 0;
+	list-style: none;
+	li{
+		font-size: 12px;
+		padding: 5px 0;
+	}
 }
 
 
