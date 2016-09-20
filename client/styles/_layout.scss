@@ -162,21 +162,23 @@ div.order_box{
 	img{
 		display: block;
 		margin: 0 auto;
-		width: 50px;
-		opacity: 1;
+		width: 35px;
+		opacity: 0.8;
 	}
 	h2.mesa{
+		border-top: 1px solid $verde-linea;
+		padding-top: 20px;
 		color: white;
 		font-size: 16px;
 		
 	}
 	button{
-		color: $verde;
+		color: white;
 	}
 }
 ul.order_list{
-	padding: 0;
-	list-style: none;
+	padding-left: 15;
+	//list-style: none;
 	li{
 		font-size: 12px;
 		padding: 5px 0;
