@@ -29,7 +29,9 @@
 		{{#each orders}}
 		<div class="order_box">
 			<img src="supper.png" >
-			<h2 class="mesa">Mesa# {{numeroMesa}}</h2>
+			<h2 class="mesa">Mesa# {{numeroMesa}} >
+				<span style="color:red">{{estado}}</span>
+			</h2>
 			<ul class="order_list">
 				{{#each orderItems}}
 				<li>{{name}}</li>

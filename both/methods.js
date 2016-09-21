@@ -10,7 +10,8 @@ Meteor.methods({
 	'createOrder'( orderInfo ){
 		Ordenes.insert({
 			numeroMesa: orderInfo.numeroMesa,
-			orderItems: orderInfo.dataArray
+			orderItems: orderInfo.dataArray,
+			estado: 'pendiente'
 		});
 	}
 });

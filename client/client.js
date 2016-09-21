@@ -17,6 +17,11 @@ Template.orders.helpers({
 		return Ordenes.find();
 	}
 });
+Template.orders.events({
+	'click button.order_is_ready'(event){
+		console.log( event );
+	}
+});
 
 //==================================================
 //             HACER-PEDIDO TEMPLATE 
