@@ -1,4 +1,4 @@
-import{ validaExistenciaMesa } from '../both/validationUtility.js'
+import{ validaExistenciaMesa } from '../both/utils.js'
 import{ Productos, Mesas, Ordenes } from '../both/collections.js';
 
 
