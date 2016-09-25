@@ -13,5 +13,12 @@ Meteor.methods({
 			orderItems: orderInfo.dataArray,
 			estado: 'pendiente'
 		});
+	},
+	'orderIsReady'( orderInfo ){
+		console.log( orderInfo );
+		Ordenes.update(
+			{ _id: orderInfo.id },
+			{$set:{ estado: 'listo' }} 
+		);
 	}
 });

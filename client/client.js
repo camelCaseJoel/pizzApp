@@ -19,7 +19,13 @@ Template.orders.helpers({
 });
 Template.orders.events({
 	'click button.order_is_ready'(event){
-		console.log(this._id);
+		let orderInfo = { id: this._id };
+
+		Meteor.call('orderIsReady', orderInfo, function(error){
+			if(error){
+				console.log(error.reason);
+			}
+		} );
 	}
 });
 
