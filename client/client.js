@@ -19,7 +19,7 @@ Template.orders.helpers({
 });
 Template.orders.events({
 	'click button.order_is_ready'(event){
-		console.log( event );
+		console.log(this._id);
 	}
 });
 
