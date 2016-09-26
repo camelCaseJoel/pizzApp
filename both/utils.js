@@ -1,7 +1,6 @@
 import { Mesas } from '../both/collections.js'
 
-
-
+//----------------------------------------- validaExistenciaMesa
 function validaExistenciaMesa( numeroMesa ){
 	let todasMesas = (Mesas.find().fetch());
 	let arrayNumeroMesas = _.pluck(todasMesas, 'numero');
@@ -14,7 +13,19 @@ function validaExistenciaMesa( numeroMesa ){
 
 	return true;
 }
+//----------------------------------------- orderColorState
+function orderColorState ( color ){
+	console.log('color!!! yoopie!!!');
+}
 
 
 
-export { validaExistenciaMesa };
+
+//----------------------ADD ALL TO exported-OBJECT
+let utils = {
+	validaExistenciaMesa,
+	orderColorState
+}
+
+
+export { utils };

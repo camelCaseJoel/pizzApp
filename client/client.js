@@ -1,4 +1,4 @@
-import{ validaExistenciaMesa } from '../both/utils.js'
+import{ utils } from '../both/utils.js'
 import{ Productos, Mesas, Ordenes } from '../both/collections.js';
 
 
@@ -50,7 +50,7 @@ Template.hacerPedido.events({
 
 		//Validación de 'mesa'
 		let numeroMesa = Number( $('#mesa').val() );
-		let passedTest = validaExistenciaMesa( numeroMesa );
+		let passedTest = utils.validaExistenciaMesa( numeroMesa );
 		console.log( passedTest );
 
 		//getting data from UI (products)
