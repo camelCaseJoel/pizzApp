@@ -3,7 +3,7 @@ import{ Productos, Mesas, Ordenes } from '../both/collections.js';
 
 
 
-// checking data -- DEBUG
+// //====KEEPING AN EYE ON THINGS
 // Deps.autorun(function() {
 // 	console.log( Productos.find().fetch() );
 // 	console.log( Mesas.find().fetch() );
@@ -15,6 +15,16 @@ import{ Productos, Mesas, Ordenes } from '../both/collections.js';
 Template.orders.helpers({
 	orders(){
 		return Ordenes.find();
+	},
+	getStatusColor( status ){
+		let color;
+		if( status == 'listo' ){
+			color = 'blue';
+		}else if( status == 'pendiente' ){
+			color = 'red';
+		}
+
+		return color;
 	}
 });
 Template.orders.events({
@@ -26,6 +36,8 @@ Template.orders.events({
 				console.log(error.reason);
 			}
 		} );
+		
+		
 	}
 });
 

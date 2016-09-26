@@ -15,7 +15,7 @@ Meteor.methods({
 		});
 	},
 	'orderIsReady'( orderInfo ){
-		console.log( orderInfo );
+		
 		Ordenes.update(
 			{ _id: orderInfo.id },
 			{$set:{ estado: 'listo' }} 
